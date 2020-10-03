@@ -1,4 +1,4 @@
-# Exercises (With Answers)
+# Exercises (Without Answers)
 
 ## Exercise 1
 1. Select the first few records from the `power_generation` and `power_plants` tables. Write down the columns you believe are shared between these tables.

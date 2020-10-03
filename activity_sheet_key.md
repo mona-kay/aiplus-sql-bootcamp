@@ -1,4 +1,4 @@
-# Exercises (Without Answers)
+# Exercises (With Answers)
 
 ## Exercise 1
 1. Select the first few records from the `power_generation` and `power_plants` tables. Write down the columns you believe are shared between these tables.
@@ -255,10 +255,9 @@ GROUP BY av.year,
 ## Exercise 9
 1. How many power plants in the database have a primary fuel that is a form of renewable energy -- `IN ('Hydro', 'Wind', 'Solar', 'Geothermal', 'Wave and Tidal')`?
 ```sql
-SELECT
-    CASE WHEN primary_fuel IN ('Hydro', 'Wind', 'Solar', 'Geothermal', 'Wave and Tidal')
-         THEN 'Renewable' ELSE 'Non-Renewable' END AS fuel_type,
-    count(*) as pplants
+SELECT CASE WHEN primary_fuel IN ('Hydro', 'Wind', 'Solar', 'Geothermal', 'Wave and Tidal')
+            THEN 'Renewable' ELSE 'Non-Renewable' END AS fuel_type,
+       count(*) as pplants
 FROM power_plants
 GROUP BY 1;
 ```
